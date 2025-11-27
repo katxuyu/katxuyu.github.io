@@ -61,6 +61,9 @@
   const playButtonPop = () => playSafe(sounds.button);
   const playBasePop = () => playSafe(sounds.base);
   const playPandaPop = () => playSafe(sounds.panda);
+  window.playButtonPop = playButtonPop;
+  window.playBasePop = playBasePop;
+  window.playPandaPop = playPandaPop;
 
   const resize = () => {
     width = window.innerWidth;
@@ -668,6 +671,18 @@
       el.textContent = el.dataset.phone;
       el.classList.add('revealed');
     });
+  });
+})();
+
+// Button/nav click sounds
+(() => {
+  const clickSound = () => {
+    if (window.playButtonPop) window.playButtonPop();
+  };
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.btn') || e.target.closest('.nav-link')) {
+      clickSound();
+    }
   });
 })();
 
@@ -1420,6 +1435,7 @@
     const maxW = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     const maxH = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
     const pool = shuffle([...pandaSources]);
+    const pandaPop = window.playPandaPop || (() => {});
     for (let i = 0; i < count; i++) {
       const img = document.createElement('img');
       img.src = pool[i % pool.length];
@@ -1435,7 +1451,7 @@
           img.style.opacity = 0.35;
           found += 1;
           updateCounts();
-          playPandaPop();
+          pandaPop();
           img.remove();
         }
       });
