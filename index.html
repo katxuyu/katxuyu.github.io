@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gie Grajo | Bubble-Themed Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/phosphor-icons@1.4.2/dist/phosphor-icons.min.js" defer></script>
+</head>
+<body>
+  <canvas id="bubbleCanvas" aria-hidden="true"></canvas>
+  <div class="water-glow" aria-hidden="true"></div>
+  <div class="panda-bg" aria-hidden="true"></div>
+  <header class="top-nav shell">
+    <div class="brand">
+      <span class="bubble-dot"></span>
+      <img class="brand-logo" src="assets/logo.png" alt="Brand logo">
+      <span class="brand-name">KATXUYU</span>
+      <span class="brand-role">Python · Backend Developer</span>
+    </div>
+    <div class="nav-right">
+      <nav>
+        <a href="#about" class="nav-link"><i class="ph ph-user"></i>About</a>
+        <a href="#skills" class="nav-link"><i class="ph ph-sparkle"></i>Skills</a>
+        <a href="#experience" class="nav-link"><i class="ph ph-briefcase"></i>Experience</a>
+        <a href="#education" class="nav-link"><i class="ph ph-graduation-cap"></i>Education</a>
+        <a href="#awards" class="nav-link"><i class="ph ph-trophy"></i>Awards</a>
+        <a href="#training" class="nav-link"><i class="ph ph-compass"></i>Training</a>
+        <a href="#contact" class="nav-link"><i class="ph ph-paper-plane-tilt"></i>Contact</a>
+        <a href="#playground" class="nav-link"><i class="ph ph-game-controller"></i>Games</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn ghost" href="https://drive.google.com/file/d/1jNfUiRhBY6LRvN9yb9EjP98gElvfQoHv/view" target="_blank" rel="noreferrer">Download CV</a>
+        <a class="btn solid" href="#contact">Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero" id="about">
+      <div class="hero-content">
+        <p class="eyebrow">WFH-ready · Mid to Night Shift · Cloud-native Delivery</p>
+        <h1>Gie Grajo</h1>
+        <p class="lead">I’m a builder who moves between backend engines and creative labs: shipping resilient APIs, serverless systems, and data-heavy platforms by day; sketching silhouettes, editing reels, and crafting clean visuals by night. I care about reliable systems, humane interfaces, and stories that move.</p>
+        <div class="chips">
+          <span class="chip"><i class="ph ph-cloud"></i>Serverless & cloud-first</span>
+          <span class="chip"><i class="ph ph-database"></i>Data-heavy & durable</span>
+          <span class="chip"><i class="ph ph-rocket"></i>Rapid, reliable delivery</span>
+          <span class="chip"><i class="ph ph-squares-four"></i>Clean contracts & docs</span>
+        </div>
+        <div class="badge-row">
+          <span class="badge">Python · Django · Flask · Node/Express</span>
+          <span class="badge">AWS Lambda · CDK · API Gateway · S3 · RDS · DynamoDB</span>
+          <span class="badge">PostgreSQL · MySQL · Redis · DynamoDB</span>
+          <span class="badge">IoT · Robotics · Data Viz · AI tooling</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn solid" href="mailto:ragrajo04@gmail.com">Email Me</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/katxuyu" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/katxuyu" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn ghost" href="https://sites.google.com/up.edu.ph/katxuyu" target="_blank" rel="noreferrer">Portfolio Site</a>
+        </div>
+        <div class="info-grid">
+          <div>
+            <p class="label"><i class="ph ph-map-pin"></i>Location</p>
+            <p class="value">Calamba City, Laguna 4027, Philippines</p>
+          </div>
+          <div>
+            <p class="label"><i class="ph ph-phone-call"></i>Contact</p>
+            <p class="value">(+63) 927-001-6940 (Viber) · (+63) 976-058-1072</p>
+            <p class="value">ragrajo04@gmail.com</p>
+          </div>
+          <div>
+            <p class="label"><i class="ph ph-clock"></i>Availability</p>
+            <p class="value">WFH · Mid to Night Shift</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="bubble-frame">
+          <picture>
+            <img id="portraitImg" src="assets/panda_profile.gif" data-panda="assets/panda_profile.gif" data-profile="assets/profile.png" alt="Portrait of Gie Grajo" loading="lazy">
+          </picture>
+          <div class="glow glow-1"></div>
+          <div class="glow glow-2"></div>
+        </div>
+        <div class="metrics">
+          <div class="metric">
+            <span class="metric-number">8+</span>
+            <span class="metric-label">Years in backend & automation</span>
+          </div>
+          <div class="metric">
+            <span class="metric-number">Cloud</span>
+            <span class="metric-label">AWS · Azure · serverless</span>
+          </div>
+          <div class="metric">
+            <span class="metric-number">Delivery</span>
+            <span class="metric-label">APIs · data pipelines · IoT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section panel" id="story">
+      <div class="section-header">
+        <p class="eyebrow">Throughline</p>
+        <h2>Systems, signals, and style</h2>
+        <p class="section-lead">I grew up solving puzzles, then learned to weave code, sound, and visuals into products that feel alive. I like backend engines with crisp contracts, observability that tells the truth, and interfaces that respect how people move.</p>
+      </div>
+      <div class="spotlight-grid">
+        <article class="spot-card fade-up">
+          <div class="spot-head">
+            <i class="ph ph-waves"></i>
+            <div>
+              <p class="pill-title">Voice & Signal</p>
+              <p class="time">AI callers, media pipes, CRM bridges</p>
+            </div>
+          </div>
+          <p class="spot-text">I build calm backbones for chaotic signals—queue workers that never flinch, adapters that keep calls and CRMs in sync, and logs that read like a story you can trust.</p>
+        </article>
+        <article class="spot-card fade-up">
+          <div class="spot-head">
+            <i class="ph ph-circuitry"></i>
+            <div>
+              <p class="pill-title">Data & Motion</p>
+              <p class="time">IoT, analytics, visualizations</p>
+            </div>
+          </div>
+          <p class="spot-text">From sensor dust to dashboards, I design pipelines that stay breathable—serverless where it matters, tuned SQL where it counts, and charts that whisper the signal, not the noise.</p>
+        </article>
+        <article class="spot-card fade-up">
+          <div class="spot-head">
+            <i class="ph ph-pen-nib"></i>
+            <div>
+              <p class="pill-title">Design & Fashion</p>
+              <p class="time">Sketches, fabrics, edits</p>
+            </div>
+          </div>
+          <p class="spot-text">I sketch silhouettes with the same intent I use for APIs: clean lines, thoughtful layers, and movement-first cuts. Photo and video edits help me test how stories feel before they ship.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section panel" id="projects">
+      <div class="section-header">
+        <p class="eyebrow">Projects</p>
+        <h2>Project gallery with context & code</h2>
+        <p class="section-lead">Condensed highlights from your Google project pages plus direct GitHub access. Docs stay linked for deeper dives.</p>
+      </div>
+      <div class="project-columns">
+        <div class="project-column fade-up">
+          <div class="project-column-head"><i class="ph ph-briefcase"></i><div><p class="pill-title">Professional / Industry</p><p class="time">Voice AI, analytics, middleware, IoT</p></div></div>
+          <div class="project-list">
+            <div class="project-row">
+              <div class="project-title">Fluence · Multi-tenant Voice AI Platform</div>
+              <div class="project-body">Led backend for outbound/inbound AI calling: APIs, media routing, queue workers, CRM/telephony adapters, observability.</div>
+              <div class="project-links repo-cloud">
+                <a href="https://github.com/katxuyu/voice-ai-agent" target="_blank" rel="noreferrer">voice-ai-agent</a>
+                <a href="https://github.com/katxuyu/ai-caller" target="_blank" rel="noreferrer">ai-caller</a>
+                <a href="https://github.com/katxuyu/smart-pathway-builder" target="_blank" rel="noreferrer">smart-pathway-builder</a>
+                <a href="https://github.com/katxuyu/asteeinvestimenti-main" target="_blank" rel="noreferrer">asteeinvestimenti</a>
+                <a href="https://github.com/katxuyu/linkedin-api" target="_blank" rel="noreferrer">linkedin-api</a>
+                <a href="https://github.com/katxuyu/asana-mcp" target="_blank" rel="noreferrer">asana-mcp</a>
+              </div>
+              <div class="project-links"><a href="https://docs.google.com/document/d/1C07f0lvdjFaFOLGsG3MUMF4BSR0WrjwIxnnLCbXGp_g/view" target="_blank" rel="noreferrer">Docs</a></div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">DeepData · DatViz AI</div>
+              <div class="project-body">AI-driven data viz platform with chat-style graph generation; Flask + parallel processing, Vue.js UI, PostgreSQL on AWS.</div>
+              <div class="project-links">
+                <a href="https://datvizai.com/" target="_blank" rel="noreferrer">Live</a>
+                <a href="https://github.com/katxuyu/datvizai" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">Ikaros · Taggy Analytics Middleware</div>
+              <div class="project-body">Syncs GA and event sources into BI; Segment, Customer.io, GA APIs; serverless pipeline on AWS Lambda/API GW/CDK/S3/PostgreSQL/DynamoDB.</div>
+              <div class="project-links"><span class="tag muted">Private</span></div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">Accenture · SAP/ETL Middleware</div>
+              <div class="project-body">Python middleware transforming ETL outputs into SAP formats on AWS (Lambda, S3, RDS); Flask + SQLAlchemy services for reinsurance client.</div>
+              <div class="project-links"><span class="tag muted">Private</span></div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">Packetworx · IoT & Trendz AI</div>
+              <div class="project-body">Sensor forecasting dashboards and device pipelines (ingest, payloads, monitoring, automation); multiple open-source modules.</div>
+              <div class="project-links repo-cloud">
+                <a href="https://github.com/katxuyu/MQTT" target="_blank" rel="noreferrer">MQTT</a>
+                <a href="https://github.com/katxuyu/Things-API-Module" target="_blank" rel="noreferrer">Things API</a>
+                <a href="https://github.com/katxuyu/Open-faas" target="_blank" rel="noreferrer">OpenFaaS</a>
+                <a href="https://github.com/katxuyu/Things-Synchronizer" target="_blank" rel="noreferrer">Synchronizer</a>
+                <a href="https://github.com/katxuyu/Localization" target="_blank" rel="noreferrer">Localization</a>
+                <a href="https://github.com/katxuyu/Kafka" target="_blank" rel="noreferrer">Kafka</a>
+                <a href="https://github.com/katxuyu/Payload-Constructors" target="_blank" rel="noreferrer">Payloads</a>
+                <a href="https://github.com/katxuyu/Gateway-Monitoring" target="_blank" rel="noreferrer">Gateways</a>
+                <a href="https://github.com/katxuyu/EventHub" target="_blank" rel="noreferrer">EventHub</a>
+                <a href="https://github.com/katxuyu/API" target="_blank" rel="noreferrer">API</a>
+                <a href="https://github.com/katxuyu/Cups-Server" target="_blank" rel="noreferrer">CUPS</a>
+                <a href="https://github.com/katxuyu/Home-Automation" target="_blank" rel="noreferrer">Home-Automation</a>
+                <a href="https://github.com/katxuyu/Mandala-Generator" target="_blank" rel="noreferrer">Mandala-Generator</a>
+              </div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">Divergt Co.</div>
+              <div class="project-body">Water district mobile monitoring (Python/Flask + AI image processing) and car insurance web app with geolocation on Django/MySQL.</div>
+              <div class="project-links"><span class="tag muted">Private</span></div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">Accenture · Automation & Monitoring (2019)</div>
+              <div class="project-body">Telegram bot for VAS alerts, Nagios/EAI integrations, deployment/diagnostic tools, and ops automations.</div>
+              <div class="project-links"><span class="tag muted">Private</span></div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">Upwork · Freelance</div>
+              <div class="project-body">Home automation IoT control (Flask + PostgreSQL + MQTT), commercial air-purifying control (Vue + Python), and election survey dashboards.</div>
+              <div class="project-links"><a href="https://github.com/katxuyu/Home-Automation" target="_blank" rel="noreferrer">Home-Automation</a></div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">Virtus Solutions</div>
+              <div class="project-body">WordPress + Vue/PHP extensions for interactive reports and the Virtus Solutions site for water hardware/software.</div>
+              <div class="project-links"><a href="https://virtussolutionsllc.com/" target="_blank" rel="noreferrer">Live site</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-column fade-up">
+          <div class="project-column-head"><i class="ph ph-flask"></i><div><p class="pill-title">Graduate Projects</p><p class="time">Robotics, networking, AI</p></div></div>
+          <div class="project-list">
+            <div class="project-row">
+              <div class="project-title">PPE: Pandemic Panic Eating</div>
+              <div class="project-body">P2P multiplayer pandemic sim—collect safe particles, avoid infection; Unity+C#+Photon+WebRTC, no central server.</div>
+              <div class="project-links">
+                <a href="https://drive.google.com/file/d/1I3INgeFxrqEsVowfHdqjdzR48k9dnRVi/view" target="_blank" rel="noreferrer">Docs</a>
+              </div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">Tetris Packing Analysis</div>
+              <div class="project-body">Compares online Tetris packing algorithms (packing, scoring, modified) for space use and gameplay; ACRES 2021.</div>
+              <div class="project-links">
+                <a href="https://drive.google.com/file/d/1w16oUkvkDwpRz0sx7GVrsz7kiVDBuw5W/view" target="_blank" rel="noreferrer">Docs</a>
+              </div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">CPU Affined Threading for Matrix Distribution</div>
+              <div class="project-body">Benchmarks CPU affinity in threaded matrix distribution across sockets; explains when affinity hurts IO/network workloads.</div>
+              <div class="project-links">
+                <a href="https://github.com/katxuyu/Parallel-Processing" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://drive.google.com/file/d/1LRreDKgufZE5AAcaigdqyi6842XiLbiH/view" target="_blank" rel="noreferrer">Docs</a>
+              </div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">Wi-Fi Indoor Localization with ANN</div>
+              <div class="project-body">ANN-based indoor localization; compares against RF/LogReg/SVC; achieves strong F1 scores on Wi-Fi signal datasets.</div>
+              <div class="project-links">
+                <a href="https://github.com/katxuyu/ANN" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://drive.google.com/file/d/17Mc6EhOHVFi21vElSxrPhQ20fNPsuqiC/view" target="_blank" rel="noreferrer">Docs</a>
+              </div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">Swarm Robotics Message Passing & Localization</div>
+              <div class="project-body">NetLogo swarm sim studying message passing, movement patterns, and localization robustness.</div>
+              <div class="project-links">
+                <a href="https://github.com/katxuyu/Robotics-Swarm-Simulation" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://drive.google.com/file/d/1nFmW5gn9udOzbTzp0sbtzQTYzHQxd8bH/view" target="_blank" rel="noreferrer">Docs</a>
+              </div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">WebRTC Zoom Clone</div>
+              <div class="project-body">Node.js signaling + WebRTC for audio/video/data channels; rooms, NAT traversal, security basics.</div>
+              <div class="project-links">
+                <a href="https://github.com/katxuyu/WebRTC-Zoom-Clone" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-column fade-up">
+          <div class="project-column-head"><i class="ph ph-graduation-cap"></i><div><p class="pill-title">Undergraduate Projects</p><p class="time">Robotics, desktop, simulation</p></div></div>
+          <div class="project-list">
+            <div class="project-row">
+              <div class="project-title">BS Thesis: Air Purifier UGV</div>
+              <div class="project-body">UGV with purifier/humidifier; WSN-guided navigation; mobile IAQ app (Wi-Fi/GSM); Best Thesis & Rank #1 BSCS.</div>
+              <div class="project-links">
+                <a href="https://drive.google.com/file/d/1Lw6WDNc_02kIQj83kvgmYxjndMTBHntx/view" target="_blank" rel="noreferrer">Docs</a>
+              </div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">RAG Memoria Optimera</div>
+              <div class="project-body">Disk optimizer: temp cleanup, dedupe, compression, malware scan via digests, defrag with live monitoring.</div>
+              <div class="project-links">
+                <a href="https://drive.google.com/file/d/1QZjzg1HG6dV0id7LPBC09Rkl5OFZ5Ny4/view" target="_blank" rel="noreferrer">User manual</a>
+              </div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">MRT-2 Queue Simulation</div>
+              <div class="project-body">AnyLogic model of MRT2 queues; extra card machines + FIFO policies reduce wait times vs current process.</div>
+              <div class="project-links"><span class="tag muted">Docs on request</span></div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">Restaurant Management System</div>
+              <div class="project-body">LAN-based ordering with customer + crew terminals, live queue, receipt generation, ingredient toggles.</div>
+              <div class="project-links"><span class="tag muted">Docs on request</span></div>
+            </div>
+            <div class="project-row">
+              <div class="project-title">Other software builds</div>
+              <div class="project-body">CCC website (PHP/CSS), Rage of the Ancient (C++), Word Collide (Java), personal/e-commerce sites, Karaoke Simulator, Hotel Reservation.</div>
+              <div class="project-links"><span class="tag muted">Links on request</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section panel" id="skills">
+      <div class="section-header">
+        <p class="eyebrow">Capability Stack</p>
+        <h2>Skills that power production systems</h2>
+        <p class="section-lead">I design for reliability first: clean contracts, observability, safe rollouts, and performance-minded data models.</p>
+      </div>
+      <div class="pill-grid">
+        <div class="pill-card">
+          <p class="pill-title"><i class="ph ph-code"></i>Languages</p>
+          <p>Python (primary), C#, Java, JavaScript/TypeScript, C++, PHP.</p>
+        </div>
+        <div class="pill-card">
+          <p class="pill-title"><i class="ph ph-plugs-connected"></i>Backend & APIs</p>
+          <p>Django, Flask, Node.js/Express, RESTful API design, WebSocket, serverless app patterns.</p>
+        </div>
+        <div class="pill-card">
+          <p class="pill-title"><i class="ph ph-devices"></i>Frontend</p>
+          <p>React, Vue, Gatsby, Builder.io, Materialize, Bootstrap.</p>
+        </div>
+        <div class="pill-card">
+          <p class="pill-title"><i class="ph ph-cloud-arrow-up"></i>Cloud</p>
+          <p>AWS (Lambda, CDK, API Gateway, S3, RDS, DynamoDB, ECS, EC2, SQS, CodePipeline/Build, Athena, CloudWatch), Azure Functions, Blob Storage, Event Grid.</p>
+        </div>
+        <div class="pill-card">
+          <p class="pill-title"><i class="ph ph-database"></i>Databases</p>
+          <p>PostgreSQL, MySQL, Oracle SQL, DynamoDB, Athena; schema design, performance tuning, analytics.</p>
+        </div>
+        <div class="pill-card">
+          <p class="pill-title"><i class="ph ph-git-branch"></i>DevOps & CI/CD</p>
+          <p>Git/GitLab/GitHub CI, Jenkins, Docker, Terraform, Kubernetes, AWS CodePipeline/Build, observability (CloudWatch, Prometheus/Grafana, logs/metrics/traces).</p>
+        </div>
+        <div class="pill-card">
+          <p class="pill-title"><i class="ph ph-magic-wand"></i>Automation & AI</p>
+          <p>Python scripting, Unix/Bash, Automation Anywhere, Blue Prism, Kestra Automation, Telegram Bots, LLM validation, scikit-learn, spaCy.</p>
+        </div>
+        <div class="pill-card">
+          <p class="pill-title"><i class="ph ph-robot"></i>IoT & Robotics</p>
+          <p>Arduino, Raspberry Pi, MQTT, Pyro5, Photon; Thingsboard, Trendz Analytics; robotics programming.</p>
+        </div>
+        <div class="pill-card">
+          <p class="pill-title"><i class="ph ph-globe-hemisphere-west"></i>Industries</p>
+          <p>E-commerce, insurance, reinsurance, IoT, telecom, data science, voice AI.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-header">
+        <p class="eyebrow">Trajectory</p>
+        <h2>Recent work and impact</h2>
+      </div>
+      <div class="timeline">
+        <article class="card">
+          <div class="card-top">
+            <img class="org-logo" src="assets/fluence.png" alt="Fluennce logo" loading="lazy">
+            <div class="card-meta">
+              <p class="time">Jul 2025 – Aug 2025</p>
+              <p class="role">Lead Backend Developer · Fluennce (Freelance)</p>
+            </div>
+          </div>
+          <p>Designed a 3-service Voice AI backend with idempotent jobs and real queueing for multi-tenant, multi-CRM use.</p>
+          <ul>
+            <li>Built API/webhooks, dialer workers, Sheets enrichment, booking, follow-ups, and KPI reporting.</li>
+            <li>Set adapter contracts (telephony/CRM), routing by service/province, and client-specific features (payment links, IVR/DTMF bypass).</li>
+            <li>Established observability and reliability (structured logs/metrics/traces, Slack alerts, retries/backoff/DLQ, timeouts, circuit breakers, secure secrets/signatures).</li>
+            <li>Drove docs, mentoring, canary deploys, and migrations with minimal downtime.</li>
+            <li>Stack: Node.js (TypeScript), Python, Express, WebSocket, Redis/BullMQ, PostgreSQL, ElevenLabs, Twilio/Asterisk/SiDial, Google Sheets API, Stripe, WhatsApp/Messaging, Docker, GitHub CI, Prometheus/Grafana, Pino.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <img class="org-logo" src="assets/innodata.png" alt="Innodata logo" loading="lazy">
+            <div class="card-meta">
+              <p class="time">Dec 2024 – Apr 2025</p>
+              <p class="role">Subject Matter Expert (Computer Science) · Innodata (Freelance)</p>
+            </div>
+          </div>
+          <p>Evaluated AI-generated CS responses and automated hallucination detection for enterprise LLM validation.</p>
+          <ul>
+            <li>Built a Python-based validation system with a rule-augmented classifier (scikit-learn, spaCy) and heuristics.</li>
+            <li>Developed Flask APIs for async checks; stored evaluations and metadata in PostgreSQL.</li>
+            <li>Improved consistency and reduced manual review by 30% via pipeline refinement with annotation/QA teams.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <img class="org-logo" src="assets/deepdata.png" alt="DeepData logo" loading="lazy">
+            <div class="card-meta">
+              <p class="time">Nov 2024 – Jan 2025</p>
+              <p class="role">Full-Stack Developer · DeepData Inc. (Upwork)</p>
+            </div>
+          </div>
+          <p>Owned architecture and delivery of an AI-driven automated graph visualization chatbot.</p>
+          <ul>
+            <li>Built Flask backend with parallel processing for real-time graph generation and data cleaning.</li>
+            <li>Shipped interactive Vue.js frontend with auto-suggested visualizations; deployed on PostgreSQL.</li>
+            <li>Stack: Python, Flask, Vue.js, OpenAI API, AWS EC2/RDS, PostgreSQL.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <img class="org-logo" src="assets/ikaros.svg" alt="Ikaros logo" loading="lazy">
+            <div class="card-meta">
+              <p class="time">Jun 2024 – Sep 2024</p>
+              <p class="role">Software Engineer · Ikaros (Outsourced Inc.)</p>
+            </div>
+          </div>
+          <p>Developed and optimized backend systems with analytics integrations.</p>
+          <ul>
+            <li>Integrated Segment Functions, Customer.io, and Google Analytics APIs for real-time reporting and automation.</li>
+            <li>Led Taggy platform: synchronized GA reports to Supabase using AWS Lambda, API Gateway, CDK, S3.</li>
+            <li>Optimized SQL with PostgreSQL and DynamoDB; streamlined CI/CD via GitHub CI and Kestra Automation.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <img class="org-logo" src="assets/paketworx.png" alt="Packetworx logo" loading="lazy">
+            <div class="card-meta">
+              <p class="time">Jun 2022 – Mar 2024</p>
+              <p class="role">Data Engineer / Consulting Software Engineer · Packetworx Inc.</p>
+            </div>
+          </div>
+          <p>Delivered serverless IoT data processing and dashboards.</p>
+          <ul>
+            <li>Built Azure Functions and Flask APIs for ingesting and reporting IoT sensor data; Django backends on PostgreSQL/MySQL.</li>
+            <li>Authored C# .NET app for device monitoring and remote configuration; improved visibility for engineering.</li>
+            <li>Created interactive dashboards with Trendz Analytics; applied advanced data science techniques for insights.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <img class="org-logo" src="assets/accenture.png" alt="Accenture logo" loading="lazy">
+            <div class="card-meta">
+              <p class="time">Mar 2022 – Jun 2024</p>
+              <p class="role">Application Development Analyst · Accenture Inc.</p>
+            </div>
+          </div>
+          <p>Built middleware and automation for financial data and reinsurance systems.</p>
+          <ul>
+            <li>Developed scalable Accounting Hub middleware on AWS (Lambda, S3, RDS) for SAP-ready financial data.</li>
+            <li>Integrated Flask + SQLAlchemy for claims/policy management; ensured data integrity and consistency.</li>
+            <li>Migrated resources from AWS pipelines to DevOps, reducing downtime; used OpenAI API for automation.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <img class="org-logo" src="assets/divergt.png" alt="Divergt logo" loading="lazy">
+            <div class="card-meta">
+              <p class="time">Jan 2020 – Jan 2022</p>
+              <p class="role">Co-Founder · Divergt Co.</p>
+            </div>
+          </div>
+          <p>Led full backend delivery for client apps.</p>
+          <ul>
+            <li>Built REST APIs on Django/Flask with PostgreSQL/MySQL; delivered water-district monitoring and car insurance platforms.</li>
+            <li>Implemented geolocation services and AI/automation to modernize legacy systems; deployed on AWS.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <img class="org-logo" src="assets/upwork.png" alt="Upwork logo" loading="lazy">
+            <div class="card-meta">
+              <p class="time">Jan 2020 – Jan 2022</p>
+              <p class="role">Python Developer · Upwork (Freelance)</p>
+            </div>
+          </div>
+          <p>Delivered full-stack and IoT solutions for multiple clients.</p>
+          <ul>
+            <li>Built Flask APIs with PostgreSQL/MySQL; added MQTT client-server to IoT home automation.</li>
+            <li>Developed election survey web app with dashboards; ensured scalable data collection.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <img class="org-logo" src="assets/accenture.png" alt="Accenture logo" loading="lazy">
+            <div class="card-meta">
+              <p class="time">Jan 2019 – Dec 2019</p>
+              <p class="role">Associate Software Engineer · Accenture Inc.</p>
+            </div>
+          </div>
+          <p>Automated deployment tasks and monitoring for VAS/EAI systems.</p>
+          <ul>
+            <li>Developed Python automation scripts and Flask APIs; improved operational efficiency.</li>
+            <li>Built Telegram bot for real-time system alerts; contributed to C# .NET diagnostics tool.</li>
+            <li>Worked with Oracle SQL for performance-focused data operations; used Nagios/Tibco.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <img class="org-logo" src="assets/upwork.png" alt="Upwork logo" loading="lazy">
+            <div class="card-meta">
+              <p class="time">Jan 2018 – Feb 2019</p>
+              <p class="role">Python Developer · Upwork (Freelance)</p>
+            </div>
+          </div>
+          <p>Integrated robotics and IoT concepts into production apps.</p>
+          <ul>
+            <li>Built Vue.js frontend + Python backend for air purifying robotics platform.</li>
+            <li>Delivered scalable web and data communication for IoT-enabled systems.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <img class="org-logo" src="assets/virtvs.png" alt="VRTVS logo" loading="lazy">
+            <div class="card-meta">
+              <p class="time">Mar 2017 – Dec 2017</p>
+              <p class="role">Consultant Web Developer · VRTVS Inc.</p>
+            </div>
+          </div>
+          <p>Developed Vue.js + PHP web application and integrated WordPress features.</p>
+          <ul>
+            <li>Transitioned from intern to freelance lead; shipped custom report builder.</li>
+            <li>Supported water hardware/software solution industry with analytics.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section panel" id="fashion">
+      <div class="section-header">
+        <p class="eyebrow">Style Story</p>
+        <h2>Fashion capsules & visual design</h2>
+        <p class="section-lead">From code to couture: I translate systems thinking into silhouettes—structured lines, controlled palettes, and motion-ready garments.</p>
+      </div>
+      <div class="fashion-grid">
+        <div class="fashion-card">
+          <h3>Concept</h3>
+          <p>Clean geometry, fluid drape, and tech-inspired trims. I balance sharp tailoring with translucent layers (think bubble-light sheers) to mirror my product work.</p>
+        </div>
+        <div class="fashion-card">
+          <h3>Process</h3>
+          <p>Sketch → 3D mock (SketchUp/Marvelous) → fabric swatches → motion tests. I iterate like sprints: quick studies, fit checks, then refined lines.</p>
+        </div>
+        <div class="fashion-card">
+          <h3>Media</h3>
+          <p>Illustration, portrait sketching, photo/video edits, and runway-ready boards. Drop your fashion boards into <code>assets/fashion/</code> to showcase them here.</p>
+        </div>
+      </div>
+      <div class="fashion-gallery">
+        <div class="fashion-shot" style="background-image:url('assets/fashion1.jpg')"></div>
+        <div class="fashion-shot" style="background-image:url('assets/fashion2.jpg')"></div>
+        <div class="fashion-shot" style="background-image:url('assets/fashion3.jpg')"></div>
+        <div class="fashion-shot" style="background-image:url('assets/fashion4.jpg')"></div>
+        <div class="fashion-shot" style="background-image:url('assets/fashion5.jpg')"></div>
+        <div class="fashion-shot" style="background-image:url('assets/fashion6.jpg')"></div>
+        <div class="fashion-shot" style="background-image:url('assets/fashion7.jpg')"></div>
+        <div class="fashion-shot" style="background-image:url('assets/fashion8.jpg')"></div>
+        <div class="fashion-shot" style="background-image:url('assets/fashion9.jpg')"></div>
+        <div class="fashion-shot" style="background-image:url('assets/fashion10.jpg')"></div>
+        <div class="fashion-shot" style="background-image:url('assets/fashion11.jpg')"></div>
+        <div class="fashion-shot" style="background-image:url('assets/fashion12.jpg')"></div>
+        <div class="fashion-shot" style="background-image:url('assets/fashion13.jpg')"></div>
+        <div class="fashion-shot" style="background-image:url('assets/fashion14.jpg')"></div>
+      </div>
+    </section>
+
+    <section class="section panel" id="visual-lab">
+      <div class="section-header">
+        <p class="eyebrow">Visual Lab</p>
+        <h2>Logos, photo edits, and motion</h2>
+        <p class="section-lead">Select edits and reels—branding tweaks, retouching, and video stories.</p>
+      </div>
+      <div class="media-grid">
+        <div class="media-card">
+          <h3>Sketches</h3>
+          <p>Hand-drawn studies and line work—gesture, structure, and light.</p>
+          <div class="thumb-grid">
+            <div class="thumb" style="background-image:url('assets/sketch1.jpg')"></div>
+            <div class="thumb" style="background-image:url('assets/sketch2.jpg')"></div>
+            <div class="thumb" style="background-image:url('assets/sketch3.jpg')"></div>
+            <div class="thumb" style="background-image:url('assets/sketch4.jpg')"></div>
+            <div class="thumb" style="background-image:url('assets/sketch5.jpg')"></div>
+            <div class="thumb" style="background-image:url('assets/sketch6.jpg')"></div>
+            <div class="thumb" style="background-image:url('assets/sketch7.jpg')"></div>
+            <div class="thumb" style="background-image:url('assets/sketch8.jpg')"></div>
+            <div class="thumb" style="background-image:url('assets/sketch9.jpg')"></div>
+            <div class="thumb" style="background-image:url('assets/sketch10.jpg')"></div>
+            <div class="thumb" style="background-image:url('assets/sketch11.jpg')"></div>
+            <div class="thumb" style="background-image:url('assets/sketch12.jpg')"></div>
+            <div class="thumb" style="background-image:url('assets/sketch13.jpg')"></div>
+            <div class="thumb" style="background-image:url('assets/sketch14.jpg')"></div>
+            <div class="thumb" style="background-image:url('assets/sketch15.jpg')"></div>
+          </div>
+        </div>
+        <div class="media-card">
+          <h3>Photo & Logo Edits</h3>
+          <p>Skin-tone safe retouching and logo cleanups—balanced contrast, crisp edges.</p>
+          <div class="thumb-grid">
+            <div class="thumb" style="background-image:url('assets/logoedit1.png')"></div>
+            <div class="thumb" style="background-image:url('assets/logoedit2.png')"></div>
+            <div class="thumb" style="background-image:url('assets/logoedit3.png')"></div>
+            <div class="thumb" style="background-image:url('assets/logoedit4.png')"></div>
+            <div class="thumb" style="background-image:url('assets/logoedit5.png')"></div>
+            <div class="thumb" style="background-image:url('assets/logoedit6.png')"></div>
+            <div class="thumb" style="background-image:url('assets/photoedit1.png')"></div>
+            <div class="thumb" style="background-image:url('assets/photoedit2.png')"></div>
+            <div class="thumb" style="background-image:url('assets/photoedit3.jpg')"></div>
+          </div>
+        </div>
+        <div class="media-card">
+          <h3>Video Reels</h3>
+          <p>Quick cuts and storytelling edits—play right here.</p>
+          <div class="video-grid">
+            <iframe src="https://www.youtube.com/embed/GLnmuOnA1Y4" title="YouTube video" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.youtube.com/embed/L3YoKGasbPw" title="YouTube video" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.youtube.com/embed/8aQ69ro6aHk" title="YouTube video" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.youtube.com/embed/4CLpLIOKjtk" title="YouTube video" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.youtube.com/embed/oF0z1C6jmso" title="YouTube video" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.youtube.com/embed/9H1BrJutWc8" title="YouTube video" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="media-card">
+          <h3>SketchUp Scenes</h3>
+          <p>Spatial studies and walkthroughs for interiors/exteriors.</p>
+          <a class="pill-link primary" href="https://drive.google.com/file/d/1sOhhCeH3lGYraDOZ6VaxdRfIEHa9JVS0/view" target="_blank" rel="noreferrer">View SketchUp video</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section panel" id="playground">
+      <div class="section-header">
+        <p class="eyebrow">Playground</p>
+        <h2>Mini Games</h2>
+        <p class="section-lead">Stack, dodge, flap, slither, and jump—pick a tab and play.</p>
+      </div>
+      <div class="game-tabs">
+        <button class="game-tab active" data-game="stack">Stack Up</button>
+        <button class="game-tab" data-game="snake">Snake</button>
+        <button class="game-tab" data-game="flappy">Flappy</button>
+        <button class="game-tab" data-game="dino">Dino Run</button>
+        <button class="game-tab" data-game="dodger">Dodger</button>
+        <button class="game-tab" data-game="whack">Whack Bubbles</button>
+        <button class="game-tab" data-game="paddle">Paddle Bounce</button>
+        <button class="game-tab" data-game="catcher">Catcher</button>
+        <button class="game-tab" data-game="memory">Memory Flip</button>
+        <button class="game-tab" data-game="chase">Target Chase</button>
+        <button class="game-tab" data-game="panda-hunt">Find Pandas</button>
+        <button class="game-tab" data-game="bubble-mini">Bubble Mini Games</button>
+      </div>
+
+      <div class="game-pane active" data-game="stack">
+        <div class="stack-card">
+          <div class="stack-controls">
+            <button class="btn solid" id="stackStart">Start / Restart</button>
+            <div class="stack-stats">
+              <span id="stackScore">Score: 0</span>
+              <span id="stackStatus">Ready</span>
+            </div>
+          </div>
+          <canvas id="stackCanvas" width="520" height="420" aria-label="Stack game area"></canvas>
+          <p class="stack-note">Tip: keep your eye on the moving block; the narrower the overlap, the harder the next drop.</p>
+        </div>
+      </div>
+
+      <div class="game-pane" data-game="snake">
+        <div class="stack-card">
+          <div class="stack-controls">
+            <button class="btn solid" id="snakeStart">Start / Restart</button>
+            <div class="stack-stats">
+              <span id="snakeScore">Score: 0</span>
+              <span id="snakeStatus">Ready</span>
+            </div>
+          </div>
+          <canvas id="snakeCanvas" width="420" height="420" aria-label="Snake game area"></canvas>
+          <p class="stack-note">Arrow keys to move. Eat food, avoid walls and yourself.</p>
+        </div>
+      </div>
+
+      <div class="game-pane" data-game="flappy">
+        <div class="stack-card">
+          <div class="stack-controls">
+            <button class="btn solid" id="flappyStart">Start / Restart</button>
+            <div class="stack-stats">
+              <span id="flappyScore">Score: 0</span>
+              <span id="flappyStatus">Ready</span>
+            </div>
+          </div>
+          <canvas id="flappyCanvas" width="520" height="420" aria-label="Flappy game area"></canvas>
+          <p class="stack-note">Click or space to flap. Stay between pipes.</p>
+        </div>
+      </div>
+
+      <div class="game-pane" data-game="dino">
+        <div class="stack-card">
+          <div class="stack-controls">
+            <button class="btn solid" id="dinoStart">Start / Restart</button>
+            <div class="stack-stats">
+              <span id="dinoScore">Score: 0</span>
+              <span id="dinoStatus">Ready</span>
+            </div>
+          </div>
+          <canvas id="dinoCanvas" width="520" height="200" aria-label="Dino run area"></canvas>
+          <p class="stack-note">Space to jump. Avoid the cacti.</p>
+        </div>
+      </div>
+
+      <div class="game-pane" data-game="dodger">
+        <div class="stack-card">
+          <div class="stack-controls">
+            <button class="btn solid" id="dodgerStart">Start / Restart</button>
+            <div class="stack-stats">
+              <span id="dodgerScore">Score: 0</span>
+              <span id="dodgerStatus">Ready</span>
+            </div>
+          </div>
+          <canvas id="dodgerCanvas" width="520" height="300" aria-label="Dodger area"></canvas>
+        <p class="stack-note">Move with left/right or A/D. Don’t get hit by falling blocks.</p>
+        </div>
+      </div>
+
+      <div class="game-pane" data-game="whack">
+        <div class="stack-card">
+          <div class="stack-controls">
+            <button class="btn solid" id="whackStart">Start / Restart</button>
+            <div class="stack-stats">
+              <span id="whackScore">Score: 0</span>
+              <span id="whackStatus">Ready</span>
+            </div>
+          </div>
+          <canvas id="whackCanvas" width="420" height="420" aria-label="Whack bubbles area"></canvas>
+          <p class="stack-note">Click the bubbles before they vanish. 30 seconds to rack up points.</p>
+        </div>
+      </div>
+
+      <div class="game-pane" data-game="paddle">
+        <div class="stack-card">
+          <div class="stack-controls">
+            <button class="btn solid" id="paddleStart">Start / Restart</button>
+            <div class="stack-stats">
+              <span id="paddleScore">Score: 0</span>
+              <span id="paddleStatus">Ready</span>
+            </div>
+          </div>
+          <canvas id="paddleCanvas" width="520" height="320" aria-label="Paddle bounce area"></canvas>
+          <p class="stack-note">Move with left/right or A/D. Keep the ball alive.</p>
+        </div>
+      </div>
+
+      <div class="game-pane" data-game="catcher">
+        <div class="stack-card">
+          <div class="stack-controls">
+            <button class="btn solid" id="catchStart">Start / Restart</button>
+            <div class="stack-stats">
+              <span id="catchScore">Score: 0</span>
+              <span id="catchStatus">Lives: 3</span>
+            </div>
+          </div>
+          <canvas id="catchCanvas" width="520" height="360" aria-label="Catcher area"></canvas>
+          <p class="stack-note">Catch green blocks, avoid red. Move with left/right or A/D.</p>
+        </div>
+      </div>
+
+      <div class="game-pane" data-game="memory">
+        <div class="stack-card">
+          <div class="stack-controls">
+            <button class="btn solid" id="memoryStart">Start / Restart</button>
+            <div class="stack-stats">
+              <span id="memoryStatus">Find all pairs.</span>
+            </div>
+          </div>
+          <div class="memory-grid" id="memoryGrid" aria-label="Memory cards"></div>
+          <p class="stack-note">Click cards to flip. Match all pairs with the fewest tries.</p>
+        </div>
+      </div>
+
+      <div class="game-pane" data-game="chase">
+        <div class="stack-card">
+          <div class="stack-controls">
+            <button class="btn solid" id="chaseStart">Start / Restart</button>
+            <div class="stack-stats">
+              <span id="chaseScore">Score: 0</span>
+              <span id="chaseStatus">Ready</span>
+            </div>
+          </div>
+          <canvas id="chaseCanvas" width="520" height="320" aria-label="Target chase area"></canvas>
+          <p class="stack-note">Click the moving target before it jumps away. Time-limited frenzy.</p>
+        </div>
+      </div>
+
+      <div class="game-pane" data-game="panda-hunt">
+        <div class="stack-card">
+          <div class="stack-controls">
+            <button class="btn solid" id="pandaRespawn">Respawn Pandas</button>
+            <div class="stack-stats">
+              <span id="pandaFound">Found: 0</span>
+              <span id="pandaTotal">Total: 0</span>
+            </div>
+          </div>
+          <p class="stack-note">Pandas are scattered playfully around the page. Click them all to win.</p>
+        </div>
+      </div>
+
+      <div class="game-pane" data-game="bubble-mini">
+        <div class="stack-card">
+          <p class="stack-note">Three quick bubble modes: Pop Sprint, Precision Pop, Bubble Catch. Open and play here.</p>
+          <button class="btn solid" id="bubbleOpen">Open Bubble Mini Games</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section panel" id="education">
+      <div class="section-header">
+        <p class="eyebrow">Learning</p>
+        <h2>Education & Research</h2>
+      </div>
+      <div class="dual-grid">
+        <div class="card compact">
+          <div class="edu-head">
+            <img class="edu-logo" src="assets/uplb.png" alt="UPLB logo" loading="lazy">
+            <div>
+              <p class="role">MS Computer Science (Ongoing)</p>
+              <p class="time">Sep 2020 – Present · University of the Philippines Los Baños (UPLB)</p>
+            </div>
+          </div>
+          <p>Thesis: Optimizing Decentralized Swarm Robotics — Adaptive communication protocols and energy-efficient strategies for land-based autonomous systems.</p>
+        </div>
+        <div class="card compact">
+          <div class="edu-head">
+            <img class="edu-logo" src="assets/ccc.png" alt="City College of Calamba logo" loading="lazy">
+            <div>
+              <p class="role">BS Computer Science</p>
+              <p class="time">Jun 2014 – Jun 2018 · City College of Calamba (CCC)</p>
+            </div>
+          </div>
+          <p>Thesis: Indoor Air Purifier and Humidifier Autonomous UGV with mobile monitoring via Tangent Bug, A*, Genetic Algorithm.</p>
+        </div>
+        <div class="card compact">
+          <div class="edu-head">
+            <img class="edu-logo" src="assets/fip.png" alt="Fashion Institute of the Philippines logo" loading="lazy">
+            <div>
+              <p class="role">Fashion Institute of the Philippines</p>
+              <p class="time">Certificate · Fashion Design & Construction</p>
+            </div>
+          </div>
+          <p>Focused on pattern-making, draping, and runway presentation—bridging technical product thinking with garment craft.</p>
+        </div>
+      </div>
+      <div class="card compact ribbon">
+        <p class="role"><i class="ph ph-flask"></i>Academic Research</p>
+        <p>Comparative Analysis of Packing Algorithms for the Tetris Problem and Game.</p>
+        <p class="time">Presented at ACRES 2021 (Computational Interdisciplinary Research Labs, UPLB).</p>
+      </div>
+    </section>
+
+    <section class="section" id="awards">
+      <div class="section-header">
+        <p class="eyebrow">Recognition</p>
+        <h2>Awards & Leadership</h2>
+      </div>
+      <div class="pill-grid">
+        <div class="pill-card">
+          <p class="pill-title">Ranked #1 Overall</p>
+          <p>BS Computer Science, Class of 2018.</p>
+        </div>
+        <div class="pill-card">
+          <p class="pill-title">Best in Thesis</p>
+          <p>Indoor Air Purifier and Humidifier Autonomous UGV.</p>
+        </div>
+        <div class="pill-card">
+          <p class="pill-title">Talent Awardee</p>
+          <p>City College of Calamba Admirals Pep Squad (CAPS).</p>
+        </div>
+        <div class="pill-card">
+          <p class="pill-title">Multi-Service Awardee</p>
+          <p>Seven service awards across college organizations.</p>
+        </div>
+      </div>
+      <div class="card compact ribbon">
+        <p class="role"><i class="ph ph-megaphone"></i>Leadership & Memberships</p>
+        <ul class="inline-list">
+          <li>Rotaract Club of City College of Calamba (President 2017-2018; Member 2017-2018).</li>
+          <li>City College of Calamba Admirals Pep Squad (Public Relations Officer 2015-2016; Member 2014-2018).</li>
+          <li>Mathematically Disciplined for the Advancement of Society (Member 2014-2018).</li>
+          <li>Council of Student Leaders (Member 2017-2018).</li>
+          <li>Philippine Society of Information Technology Educators, Computer Science Society (VP Membership 2014-2015; VP External Affairs 2015-2016; Member 2014-2018).</li>
+          <li>Alliance of Software Guild Researchers and Developers (Member 2017-2018).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section panel" id="training">
+      <div class="section-header">
+        <p class="eyebrow">Continuous Growth</p>
+        <h2>Training & Seminars</h2>
+      </div>
+      <div class="dual-grid">
+        <div class="card compact">
+          <p class="role">Segment 101 & 102 Training</p>
+          <p class="time">Jun 2024 – Jul 2024 · Ikaros · Barangaroo, NSW 2000, Australia</p>
+        </div>
+        <div class="card compact">
+          <p class="role">Generative AI Bootcamp</p>
+          <p class="time">Jan 2024 – Mar 2024 · Accenture Inc. · Quezon City, Manila 1110</p>
+        </div>
+        <div class="card compact">
+          <p class="role">Data Science Training</p>
+          <p class="time">Apr 2022 – Jul 2022 · Accenture Inc. · Quezon City, Manila 1110</p>
+        </div>
+        <div class="card compact">
+          <p class="role">Power Center Bootcamp</p>
+          <p class="time">Mar 2022 – Apr 2022 · Accenture Inc. · Quezon City, Manila 1110</p>
+        </div>
+        <div class="card compact">
+          <p class="role">Advanced RPA Bootcamp</p>
+          <p class="time">Jul 2019 · Accenture Inc. · Quezon City, Manila 1110</p>
+        </div>
+        <div class="card compact">
+          <p class="role">DevOps Bootcamp</p>
+          <p class="time">Jan 2019 – Mar 2019 · Accenture Inc. · Quezon City, Manila 1110</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-header">
+        <p class="eyebrow">Reach Out</p>
+        <h2>Let’s build something resilient</h2>
+      </div>
+      <div class="contact-card">
+        <div>
+          <p class="label"><i class="ph ph-envelope-open"></i>Email</p>
+          <p class="value">ragrajo04@gmail.com</p>
+        </div>
+        <div>
+          <p class="label"><i class="ph ph-device-mobile"></i>Phone</p>
+          <p class="value">
+            <span class="blurred-phone" data-phone="(+63) 927-001-6940 (Viber)">Reveal number</span> ·
+            <span class="blurred-phone" data-phone="(+63) 976-058-1072">Reveal number</span>
+          </p>
+        </div>
+        <div>
+          <p class="label"><i class="ph ph-link"></i>Links</p>
+          <p class="value"><a href="https://www.linkedin.com/in/katxuyu" target="_blank" rel="noreferrer">LinkedIn</a> · <a href="https://github.com/katxuyu" target="_blank" rel="noreferrer">GitHub</a></p>
+        </div>
+        <div class="cta-row">
+          <a class="btn solid" href="mailto:ragrajo04@gmail.com">Start a Project</a>
+          <a class="btn ghost" href="https://drive.google.com/file/d/1jNfUiRhBY6LRvN9yb9EjP98gElvfQoHv/view" target="_blank" rel="noreferrer">Download CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Crafted with a bubble aesthetic for calm, focus, and flow. © Gie Grajo</p>
+  </footer>
+
+  <section class="game-overlay" id="gameOverlay" aria-hidden="true">
+    <div class="game-card">
+      <div class="game-top">
+        <div>
+          <p class="eyebrow">Hidden Challenge</p>
+          <h3>Bubble Mini Games</h3>
+          <p class="section-lead" id="gameDesc">Click the bubbles before they fade. 20 seconds to set a high score.</p>
+        </div>
+        <button class="btn ghost close-game" id="closeGame">Close</button>
+      </div>
+      <div class="mode-buttons">
+        <button class="mode-btn active" data-mode="pop">Pop Sprint</button>
+        <button class="mode-btn" data-mode="precision">Precision Pop</button>
+        <button class="mode-btn" data-mode="catch">Bubble Catch</button>
+      </div>
+      <div class="game-stats">
+        <span id="gameScore">Score: 0</span>
+        <span id="gameTime">Time: 20s</span>
+        <button class="btn solid" id="gameStart">Start</button>
+      </div>
+      <div class="game-area" id="gameArea"></div>
+    </div>
+  </section>
+
+  <section class="game-overlay" id="gameInfo" aria-hidden="true">
+    <div class="game-card">
+      <div class="game-top">
+        <div>
+          <p class="eyebrow">Heads up</p>
+          <h3>Playground & Panda Hunt</h3>
+          <p class="section-lead">Find the hidden pandas on the page (tab: Find Pandas). Explore all the mini games in the Playground tab.</p>
+        </div>
+        <button class="btn ghost close-game" id="closeInfo">Close</button>
+      </div>
+      <p class="stack-note">Tip: Use the Games tab in the nav to jump into all mini games.</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
